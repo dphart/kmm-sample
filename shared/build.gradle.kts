@@ -23,6 +23,19 @@ kotlin {
             }
         }
     }
+    js() {
+        useCommonJs()
+        browser {
+            testTask {
+                useKarma {
+                    useChromeHeadless()
+                    webpackConfig.cssSupport.enabled = true
+                }
+            }
+        }
+        binaries.executable()
+    }
+
     sourceSets {
         val commonMain by getting
         val commonTest by getting {
@@ -44,6 +57,8 @@ kotlin {
         }
         val iosMain by getting
         val iosTest by getting
+        val jsMain by getting
+        val jsTest by getting
     }
 }
 android {
