@@ -6,9 +6,7 @@ import kotlin.js.JsExport
 @JsExport
 @ExperimentalJsExport
 class Calculator {
-    companion object {
-        fun sum(a: Int, b: Int): Int = a + b
-    }
+   fun helloWorld() = "Hello"
 }
 
 @ExperimentalJsExport

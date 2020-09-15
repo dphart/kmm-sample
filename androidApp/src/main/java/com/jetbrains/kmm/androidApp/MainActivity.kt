@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
                 try {
                     val numA = Integer.parseInt(numATV.text.toString())
                     val numB = Integer.parseInt(numBTV.text.toString())
-                    sumTV.text =  "= " + Calculator.sum(numA, numB).toString()
                 } catch(e: NumberFormatException) {
                     sumTV.text = "= 🤔"
                 }
